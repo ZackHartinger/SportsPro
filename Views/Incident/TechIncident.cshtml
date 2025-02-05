@@ -1,0 +1,18 @@
+﻿@model EditIncidentViewModel
+@{
+	ViewData["Title"] = "Technician";
+}
+
+<h2>@ViewBag.Title</h2>
+<form asp-action="List">
+	<div class="mb-3">
+		<select asp-for="@Model.TechnicianId" class="form-select form-control"
+				asp-items="@(new SelectList(Model.Technicians, "TechnicianId", "Name"))">
+			<option value="">Please select a technician</option>
+		</select>
+	</div>
+	<button type="submit" class="btn btn-primary">Select</button>
+</form>
+
+
+@* <a asp-controller="incident" asp-action="TechIncident" class="btn btn-primary">Select</a> *@

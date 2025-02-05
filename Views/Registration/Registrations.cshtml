@@ -1,0 +1,48 @@
+﻿@{
+	ViewData["Title"] = "Registrations";
+}
+@model RegistrationsViewModel
+
+<h1>Customer: @Model.Customer.FullName</h1>
+<h1>Registrations</h1>
+
+<table class="table table-bordered table-striped mb-3">
+	<thead>
+		<th>Product</th>
+	</thead>
+	<tbody>
+		@foreach (var customerProducts in Model.Customer.Products)
+		{
+			<tr>
+				<td>@customerProducts.Name</td>
+				<td>
+					<form asp-route-id ="@customerProducts.ProductId" asp-action="Delete" method="post">
+						
+						<input type="hidden" asp-for="@Model.Customer.CustomerId" />
+						<button type="submit" class="btn btn-primary">Delete</button>
+					</form>
+					
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<h1>Product</h1>
+<form asp-action="Register" method="post">
+	<div class="row mb-3">
+		<div class="col-12">
+			<select asp-for="@Model.ProductId" class="form-select form-control" asp-items="@(new SelectList(Model.Products, "ProductId", "Name"))">
+				<option value="">Select a product</option>
+			</select>
+		</div>
+	</div>
+	<input type="hidden" asp-for="@Model.Customer.CustomerId"/>
+	<button type="submit" class="btn btn-primary mb-3" asp-controller="Registration" asp-action="Register">Register</button>
+</form>
+
+@if (TempData.Keys.Contains("registrationMessage"))
+{
+	<h4 class="p-2">@TempData["registrationMessage"]</h4>
+}
+ 

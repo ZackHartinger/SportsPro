@@ -1,0 +1,32 @@
+﻿@{
+	ViewData["Title"] = "Registrations";
+}
+@model RegistrationsViewModel
+
+<h1>Get Customer</h1>
+
+<form asp-route-id="@Model.CustomerId" asp-controller="Registration" asp-action="GetCustomer" method="get">
+	<div class="row mb-3">
+		<div class="col-12">
+			@* <select class="form-select form-control"
+					asp-items="@(new SelectList(Model.Customers, "CustomerId", "FullName"))"
+					asp-for="@Model.CustomerId">				
+				<option value="">Please select a customer</option>
+			</select> *@
+			<customer-dropdown asp-for="@Model.CustomerId" asp-for-string="Model.CustomerId"></customer-dropdown>
+		</div>
+	</div>
+	@* <a asp-controller="Registration" asp-action="GetCustomer" asp-route-id="@Model.CustomerId" class="btn btn-primary">Select</a> *@
+	<button type="submit" class="btn btn-primary">Select</button>
+</form>
+
+@* <div class="row mb-3">
+	<div class="col-12">
+		<select class="form-select form-control"
+				asp-for="@Model.CustomerId"
+				asp-items="@(new SelectList(Model.Customers, "CustomerId", "FullName"))">
+			<option value="">Please select a customer</option>
+		</select>
+	</div>
+</div>
+<a asp-controller="Registration" asp-action="GetCustomer" asp-route-id="@Model.CustomerId" class="btn btn-primary">Select</a> *@

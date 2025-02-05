@@ -1,0 +1,45 @@
+﻿@{
+	ViewData["Title"] = "Incident Manager";
+}
+@model List<Incident>
+
+<h2>@ViewData["Title"]</h2>
+
+<ul class="nav nav-pills mb-3">
+	<li class="nav-item me-3">
+		<a asp-controller="Incident" asp-action="Incidents" class="nav-link" my-mark-area-active>All Incidents</a>
+	</li>
+	<li class="nav-item me-3">
+		<a asp-controller="Incident"asp-action="GetUnassigned" class="nav-link">Unassigned Incidents</a>
+	</li>
+	<li class="nav-item me-3">
+		<a asp-controller="Incident" asp-action="GetOpen" class="nav-link" >Open Incidents</a>
+	</li>
+</ul>
+<table class="table table-bordered table-striped">
+	<thead>
+		<th>Title</th>
+		<th>Customer</th>
+		<th>Product</th>
+		<th>Date Opened</th>
+	</thead>
+	<tbody>
+		@foreach (var incident in Model)
+		{
+			<tr>
+				<td>@incident.Title</td>
+				<td>@incident.Customer.FirstName @incident.Customer.LastName</td>
+				<td>@incident.Product.Name</td>
+				<td>@incident.OpenDate</td>
+				<td>
+					<a asp-controller="Incident" asp-action="Edit"
+					   asp-route-id="@incident.IncidentId">Edit</a>
+					<a asp-controller="Incident" asp-action="Delete"
+					   asp-route-id="@incident.IncidentId">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a asp-controller="Incident" asp-action="Add" class="btn btn-primary">Add Incident</a>

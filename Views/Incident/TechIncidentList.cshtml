@@ -1,0 +1,31 @@
+﻿@model EditIncidentViewModel
+@{
+	ViewData["Title"] = "Incidents by Technician";
+}
+<h2>Technician: @ViewBag.TechnicianName</h2>
+<h2>Assigned/Open Incidents</h2>
+
+<table class="table table-bordered table-striped">
+	<thead>
+	<th>Title</th>
+	<th>Customer</th>
+	<th>Product</th>
+	<th>Date Opened</th>
+	</thead>
+	<tbody>
+		@foreach (var incident in Model.Incidents)
+		{
+			<tr>
+				<td>@incident.Title</td>
+				<td>@incident.Customer.FirstName @incident.Customer.LastName</td>
+				<td>@incident.Product.Name</td>
+				<td>@incident.OpenDate</td>
+				<td>
+					<a asp-controller="techincident" asp-action="Edit"
+					   asp-route-id="@incident.IncidentId">Edit</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+<a asp-controller="techincident" asp-action="TechIncident" class="btn btn-primary">Switch Technician</a>
