@@ -24,7 +24,7 @@
 
 <h3>Step 1: Cloning the project repository</h3>
 <p>Clone the repository by clicking the Code button in the top right corner. Select the HTTPS button and copy the link provided.</p>
-![clone_instructions_1](READMEImages/clone_instructions_1.png)
+![](READMEImages/clone_instructions_1.png)
  
 <p>Open Visual Studio and choose "continue without code" from the new project options.</p>
 <p>Select Git in Visual Studio's toolbar and select the option to Clone a Repository. This will open a dialogue where you can paste the repositorie's url you copied earlier. Then, click the clone button in the bottom right corner.</p>
