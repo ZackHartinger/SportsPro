@@ -37,9 +37,11 @@
 
 <h3>Step 2: Creating the database</h3>
 <p>First, make changes to the connection string if not using SQL Server. The connection string can be found in appsettings.json. By default the connection string is set to a local instance of a SQL Server database.</p>
-<p>While still in Visual Studio, navigate to the Package Manager console and run the following commmand:</p>
+<p>While still in Visual Studio, navigate to the Package Manager console.</p>
 
-<img src="READMEImages/database_instructions_1.png" height= "300">
+<img src="READMEImages/database_instructions.png" height= "300">
+
+<p>Run the following commmand:</p>
 
 ```
   update database
