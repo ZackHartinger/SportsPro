@@ -11,6 +11,18 @@
   <li>Register products to customers</li>
 </ul>
 
+<div align="center">
+  <img src="READMEImages/sportspro_screenshot_1.png">
+</div>
+
+<div align="center">
+  <img src="READMEImages/sportspro_screenshot_2.png">
+</div>
+
+<div align="center">
+  <img src="READMEImages/sportspro_screenshot_3.png">
+</div>
+
 <h2>How to run the program locally</h2>
 
 <p>Software needed:</p>
@@ -32,7 +44,7 @@
 <p>Open Visual Studio and choose "continue without code" from the new project options.</p>
 <p>Select Git in Visual Studio's toolbar and select the option to Clone a Repository. This will open a dialogue where you can paste the repositorie's url you copied earlier. Then, click the clone button in the bottom right corner.</p>
 <div align="center" >
-  <img src="READMEImages/clone_instruction_2.png">
+  <img src="READMEImages/clone_instructions_2.png">
 </div>
 
 <h3>Step 2: Creating the database</h3>
