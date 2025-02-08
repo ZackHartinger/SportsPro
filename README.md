@@ -24,16 +24,22 @@
 
 <h3>Step 1: Cloning the project repository</h3>
 <p>Clone the repository by clicking the Code button in the top right corner. Select the HTTPS button and copy the link provided.</p>
-![](READMEImages/clone_instructions_1.png)
- 
+
+<div align="center">
+  <img src="READMEImages/clone_instructions_1.png"> 
+</div>
+
 <p>Open Visual Studio and choose "continue without code" from the new project options.</p>
 <p>Select Git in Visual Studio's toolbar and select the option to Clone a Repository. This will open a dialogue where you can paste the repositorie's url you copied earlier. Then, click the clone button in the bottom right corner.</p>
-![clone_instruction_2](READMEImages/clone_instruction_2.png)
+<div align="center" >
+  <img src="READMEImages/clone_instruction_2.png">
+</div>
 
 <h3>Step 2: Creating the database</h3>
 <p>First, make changes to the connection string if not using SQL Server. The connection string can be found in appsettings.json. By default the connection string is set to a local instance of a SQL Server database.</p>
 <p>While still in Visual Studio, navigate to the Package Manager console and run the following commmand:</p>
-![database_instructions_1](READMEImages/database_instructions_1.png)
+
+<img src="READMEImages/database_instructions_1.png" height= "300">
 
 ```
   update database
@@ -47,3 +53,4 @@
   <li>Username: admin</li>
   <li>Password: P@ssw0rd</li>
 </ul>
+
