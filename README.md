@@ -70,9 +70,11 @@
 
 <h3>Step 3: Running the application</h3>
 <p>Now that the database is set up, you can click run in Visual Studio and the app will launch in your default browser.</p>
-<p>By default there is only one user in the database. This user has admin permissions and you will need to log in using it's credentials to use all of the features of the application. The admin user's credentials are:</p>
-<ul>
-  <li>Username: admin</li>
-  <li>Password: P@ssw0rd</li>
-</ul>
+
+> [!NOTE]
+><p>By default there is only one user in the database. This user has admin permissions and you will need to log in using it's credentials to use all of the features of the application. The admin user's credentials are:</p>
+><ul>
+>  <li>Username: admin</li>
+>  <li>Password: P@ssw0rd</li>
+></ul>
 
